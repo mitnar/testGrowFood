@@ -15,7 +15,7 @@ class CreateItemPricesTable extends Migration
     {
         Schema::create('item_prices', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('position_id');
+            $table->integer('position_id')->unsigned();
             $table->date('order_date_from');
             $table->date('delivery_date_from');
             $table->integer('price')->unsigned();
